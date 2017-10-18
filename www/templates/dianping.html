@@ -7,9 +7,9 @@
  <ion-list>
       <ion-item class="item-remove-animate item-icon-left item-icon-right"  type="item-text-wrap" >
         <i class="icon ion-chevron-left icon-accessory" ng-click="changeyear(-1);"></i>
-   
+
         <h2 class="text-center" >{{para.YearID}}年{{para.MonthID}}月</h2>
-        
+
         <i class="icon ion-chevron-right icon-accessory" ng-click="changeyear(1);"></i>
       </ion-item>
  <ion-item  style="margin-top:10px;" class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" ng-href="{{item.isDianping?'#/tab/dianpingsubmit/'+item.BCommentPersonID+'/'+para.YearID+'/'+para.MonthID+'/0':''}}" ng-repeat="item in dianpingliebiao2.Data" ng-if="$index==0">
@@ -18,9 +18,9 @@
         <p>{{item.Content}}{{item.isDianping?'已点评':'未点评'}}</p>
         <i class="icon ion-eye icon-accessory" ng-show="item.isDianping"></i>
 
-        
+
       </ion-item>
-       <ion-item  style="margin-top:10px;" class="item-remove-animate  item-icon-right"  type="item-text-wrap"  ng-href="{{(mydate.YearID==para.YearID&&mydate.MonthID==para.MonthID)?'#/tab/dianpingsubmit/'+item.BCommentPersonID+'/0/0/'+item.dpId:''}}" ng-repeat="item in dianpingliebiao3.Data">
+       <ion-item  style="margin-top:10px;" class="item-remove-animate  item-icon-right"  type="item-text-wrap"  ng-href="{{(mydate.YearID==para.YearID&&mydate.MonthID==para.MonthID)?'#/tab/dianpingsubmit/'+item.BCommentPersonID+'/'+para.YearID+'/'+para.MonthID+'/'+item.dpId:''}}" ng-repeat="item in dianpingliebiao3.Data">
         <h2>{{item.BCommentPerson}}邀请你去点评</h2>
         <p>{{item.isDianping?'已点评':'未点评'}}</p>
         <i class="icon icon-accessory" ng-show="(mydate.YearID==para.YearID&&mydate.MonthID==para.MonthID)" ng-class="item.dpId?'ion-eye':'ion-edit'"></i>
@@ -29,10 +29,10 @@
        <ion-item  style="margin-top:10px;" class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap"  ng-click="yaoqing(item)" ng-repeat="item in dianpingliebiao.Data">
         <img ng-src="{{item.HeaderPic}}" id="noradiusimg">
         <h2>{{item.BCommentPerson}}</h2>
-        
+
         <i class="icon icon-accessory" ng-show="(mydate.YearID==para.YearID&&mydate.MonthID==para.MonthID)" ng-class="item.dpId?'ion-eye':'ion-edit'"></i>
 
-        
+
       </ion-item>
 
        <!-- <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
@@ -41,7 +41,7 @@
         <p>4.2</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
-        
+
       </ion-item>
 
        <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
@@ -50,7 +50,7 @@
         <p>4.6</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
-        
+
       </ion-item> -->
     </ion-list>
   </ion-content>
