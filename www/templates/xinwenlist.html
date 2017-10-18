@@ -1,0 +1,20 @@
+<ion-view view-title="通知公告" hide-back-button="true">
+<ion-nav-buttons side="left">
+    <a  class="" style="color: white" href="#/tab/party" nav-clear ><img src="img/fanhui.png" style="width:35px;height:35px;margin-top:0px;margin-right:5px;" /></a>
+</ion-nav-buttons>
+  <ion-content style="background-color:#f5f5f5">
+ <ion-list>
+      
+
+       <ion-item style="margin-top:10px;" class="item-remove-animate  item-icon-right"  type="item-text-wrap" href="#/tab/xinwenview/{{item.tzId}}" ng-repeat="item in gonggaolist.Data">
+      
+        <p style="white-space:normal">{{item.tzTitle}}【{{item.tzFabuuserName}}于{{item.tzTime|mydate}}发布】</p>
+        <!-- <p>{{item.tzTime|mydate}}</p> -->
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

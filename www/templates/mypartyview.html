@@ -1,0 +1,102 @@
+<ion-view view-title="党员资料" hide-nav-bar="false" hide-foot-bar="false" hide-back-button="true">
+<ion-nav-buttons side="left">
+  
+     <a  class="" style="color: white" href="#/tab/zhibupaihang" nav-clear ><img src="img/fanhui.png" style="width:35px;height:35px;margin-top:0px;margin-right:5px;" /></a>
+</ion-nav-buttons>
+  <ion-content  style="background-color:#f5f5f5">
+ <ion-list>
+      <ion-item  style="margin-top:10px;" class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="{{adangyuan.Data.dyTouxiang}}" onerror="javascript:this.src='img/user_default.png';" id="noradiusimg">
+        <h2>{{adangyuan.Data.dyName}}</h2>
+        <p>支部：{{adangyuan.Data.dyDanwei}}</p>
+      </ion-item>
+
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/xb.jpg" id="noradiusimg">
+        <h2>性别</h2>
+        <p>{{adangyuan.Data.dySex==1?'男':'女'}}</p>
+
+
+        
+      </ion-item>
+
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/nl.jpg" id="noradiusimg">
+        <h2>生日</h2>
+        <p>{{(adangyuan.Data.dyBirthday|mydate).split(' ')[0]}}</p>
+       
+
+        
+      </ion-item>
+      <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/nl.jpg" id="noradiusimg">
+        <h2>入党时间</h2>
+        <p>{{(adangyuan.Data.dyRDtime|mydate).split(' ')[0]}}</p>
+       
+
+        
+      </ion-item>
+      <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/zhiwu.jpg" id="noradiusimg">
+        <h2>职务</h2>
+        <p>{{adangyuan.Data.yZhiWuName}}</p>
+       
+
+        
+      </ion-item>
+      <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/qita.jpg" id="noradiusimg">
+        <h2>电话</h2>
+        <p><a href="tel:{{adangyuan.Data.dyTel}}">{{adangyuan.Data.dyTel}}</a></p>
+       
+
+        
+      </ion-item>
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/qita.jpg" id="noradiusimg">
+        <h2>学历</h2>
+        <p>{{adangyuan.Data.dyXueLiName}}</p>
+       
+
+        
+      </ion-item>
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/qita.jpg" id="noradiusimg">
+        <h2>单位</h2>
+        <p>{{adangyuan.Data.dyDanwei}}</p>
+       
+
+        
+      </ion-item>
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/qita.jpg" id="noradiusimg">
+        <h2>家庭住址</h2>
+        <p>{{adangyuan.Data.dyJiatingzhuzhi}}</p>
+       
+
+        
+      </ion-item>
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/qita.jpg" id="noradiusimg">
+        <h2>类别</h2>
+        <p>{{adangyuan.Data.dyTypeName}}</p>
+       
+
+        
+      </ion-item>
+
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/qita.jpg" id="noradiusimg">
+        <h2>自我寄语</h2>
+        <p>{{adangyuan.Data.dyJiyu}}</p>
+       
+
+        
+      </ion-item>
+
+    
+
+    
+    </ion-list>
+  </ion-content>
+</ion-view>

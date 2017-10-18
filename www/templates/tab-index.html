@@ -1,0 +1,84 @@
+<ion-view view-title="积分管家" hide-back-button="true">
+  <ion-content>
+     <div class="row" style="padding:0">
+
+  <div class="col text-center" style="padding:0">
+
+  <ion-slide-box on-slide-changed="change();" show-pager="false" auto-play="true" slide-interval="3000" does-continue="false">
+    <ion-slide ng-repeat="agg in lunbo.Data" style="width:100%">
+   <a ng-href="{{agg.link}}" ><img ng-src="{{agg.ImgUrl}}" width="100%" height="200px;" /></a>
+    </ion-slide>
+
+</ion-slide-box>
+
+
+  </div>
+</div>
+<div class="row" style="padding: 0;margin-top:10px;">
+  <div class="col text-right">
+      <a ng-href="{{paihangdata.Data[0].dyId?'#/tab/partyview/'+paihangdata.Data[0].dyId:''}}">
+     	<img src="{{paihangdata.Data[0].dyTouxiang}}" onerror="javascript:this.src='img/user_default.png';" width="90%" height="120px" />
+      </a>
+       <h5 style="margin-top:0;margin-top:0;text-align: center;">{{paihangdata.Data[0].dyName}}</h5>
+     <h5 style="margin-top:0;margin-top:0;text-align: center;">{{paihangdata.Data[0].dyZongfen}}</h5>
+  </div>
+  <div class="col text-center" >
+     	 <a ng-href="{{paihangdata.Data[1].dyId?'#/tab/partyview/'+paihangdata.Data[1].dyId:''}}">
+      <img src="{{paihangdata.Data[1].dyTouxiang}}" onerror="javascript:this.src='img/user_default.png';" width="90%" height="120px"  />
+      </a>
+      <h5 style="margin-top:0;margin-top:0;text-align: center;">{{paihangdata.Data[1].dyName}}</h5>
+     <h5 style="margin-top:0;margin-top:0;">{{paihangdata.Data[1].dyZongfen}}</h5>
+  </div>
+  <div class="col">
+     	 <a ng-href="{{paihangdata.Data[2].dyId?'#/tab/partyview/'+paihangdata.Data[2].dyId:''}}">
+      <img src="{{paihangdata.Data[2].dyTouxiang}}" onerror="javascript:this.src='img/user_default.png';" width="90%" height="120px"  />
+      </a>
+      <h5 style="margin-top:0;margin-top:0;text-align: center;">{{paihangdata.Data[2].dyName}}</h5>
+     <h5 style="margin-top:0;margin-top:0;text-align: center;">{{paihangdata.Data[2].dyZongfen}}</h5>
+  </div>
+
+</div>
+<div class="row" style="padding: 0;margin-top:5px;">
+  <div class="col text-right">
+      <a ng-href="{{paihangdata.Data[3].dyId?'#/tab/partyview/'+paihangdata.Data[3].dyId:''}}">
+      <img src="{{paihangdata.Data[3].dyTouxiang}}" width="90%" height="120px" />
+      </a>
+      <h5 style="margin-top:0;margin-top:0;text-align: center;">{{paihangdata.Data[3].dyName}}</h5>
+     <h5 style="margin-top:0;margin-top:0;text-align: center;">{{paihangdata.Data[3].dyZongfen}}</h5>
+  </div>
+  <div class="col text-center" >
+       <a ng-href="{{paihangdata.Data[4].dyId?'#/tab/partyview/'+paihangdata.Data[4].dyId:''}}">
+      <img src="{{paihangdata.Data[4].dyTouxiang}}" onerror="javascript:this.src='img/user_default.png';" width="90%"  height="120px" />
+      </a>
+      <h5 style="margin-top:0;margin-top:0;text-align: center;">{{paihangdata.Data[4].dyName}}</h5>
+     <h5 style="margin-top:0;margin-top:0;">{{paihangdata.Data[4].dyZongfen}}</h5>
+  </div>
+  <div class="col" >
+       <a ng-href="{{paihangdata.Data[5].dyId?'#/tab/partyview/'+paihangdata.Data[5].dyId:''}}">
+      <img src="{{paihangdata.Data[5].dyTouxiang}}" onerror="javascript:this.src='img/user_default.png';" width="90%"  height="120px" />
+      </a>
+      <h5 style="margin-top:0;margin-top:0;text-align: center;">{{paihangdata.Data[5].dyName}}</h5>
+     <h5 style="margin-top:0;margin-top:0;text-align: center;">{{paihangdata.Data[5].dyZongfen}}</h5>
+  </div>
+
+</div>
+<ion-list>
+      <ion-item class="partypadding" style="margin-top:15px;">
+      <p>上年度评议分：<span class="hot">{{myfenshu.Data.shangniandu}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>本年度累计积分：<span class="hot">{{myfenshu.Data.benniandu}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>本年度基础分：<span class="hot">{{myfenshu.Data.benniandujichu}}</span>，任务分：<span class="hot">{{myfenshu.Data.banniandurenwu}}</span>，奖励分：<span class="hot">{{myfenshu.Data.benniandujiangli}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>本月积分：<span class="hot">{{myfenshu.Data.benyue}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>上月积分：<span class="hot">{{myfenshu.Data.shangyue}}</span></p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,32 @@
+<ion-view view-title="党费上缴" hide-back-button="true">
+<ion-nav-buttons side="left">
+
+    <a  class="" style="color: white" href="#/tab/account" nav-clear ><img src="img/fanhui.png" style="width:35px;height:35px;margin-top:0px;margin-right:5px;" /></a>
+</ion-nav-buttons>
+  <ion-content style="background-color:#f5f5f5">
+ <ion-list>
+      
+
+       <ion-item style="margin-top:10px;" class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" ng-repeat="item in shangjiaochaxun.Data">
+        <img ng-src="img/xl.png" id="noradiusimg">
+        <h2>{{item.Year}}年{{item.Month}}月</h2>
+        <p>{{item.IsPay}}</p>
+        
+      </ion-item>
+
+      <!--  <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/xl.png" id="noradiusimg">
+        <h2>2015年</h2>
+        <p>已交费</p>
+
+        
+      </ion-item>
+
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="img/xl.png" id="noradiusimg">
+        <h2>2014年</h2>
+        <p>已交费</p>
+      </ion-item> -->
+    </ion-list>
+  </ion-content>
+</ion-view>

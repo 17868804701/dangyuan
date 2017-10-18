@@ -1,0 +1,70 @@
+<ion-view view-title="社区任务详情" hide-back-button="true" >
+<ion-nav-buttons side="left">
+
+     <a  class="" style="color: white" href="#/tab/renwudetails" nav-clear ><img src="img/fanhui.png" style="width:35px;height:35px;margin-top:0px;margin-right:5px;" /></a>
+</ion-nav-buttons>
+  <ion-content  style="background-color:#f5f5f5">
+   <div class="row" style="margin-top:10px;" ng-if="shequrenwu.Data.IsFinish!='已完成'">
+   <div class="col">&nbsp;</div>
+   <div class="col">&nbsp;</div>
+
+      <div class="col text-right"><img src="img/baocun.png" style="width:100%" ng-click="save()" /></div>
+   <!--   <div class="col text-center"><img src="img/tijiao.png" style="width:100%" ng-click="save()"/></div>
+     <div class="col"><img src="img/tijbbc.png" style="width:100%" ng-click="save()" /></div> -->
+   </div>
+    <div class="row" style="margin-top:0px;padding:4px;"  ng-if="shequrenwu.Data.IsFinish!='已完成'">
+     <div class="col text-left text-center">
+      <p  style="background-color:#FF5555;color:white" ng-if="mydate.d>30">距离任务提交还有:{{mydate.d}}天</p>
+      <p  style="background-color:#FF5555;color:white" ng-if="mydate.d<=30">距离任务提交还有:{{mydate.d}}天</p>
+     </div>  
+   </div>
+   <div class="row" style="margin-top:0px;padding:4px;">
+     <div class="col text-left" id="redborder">
+       <span>任务名称：{{shequrenwu.Data.TaskName}}</span>
+     </div>  
+   </div>
+   <div class="row" style="margin-top:0px;padding:4px;">
+     <div class="col text-left" id="redborder">
+       <span>任务状态：{{shequrenwu.Data.IsShenhe}}</span>
+     </div>  
+   </div>
+   <div class="row" style="margin-top:0px;padding:4px;">
+     <div class="col text-center" id="redborder">
+       <textarea rows="10" ng-model="mypara.JZContent" placeholder="完成说明"  ng-disabled="shequrenwu.Data.IsFinish=='已完成'"></textarea>
+     </div>  
+   </div>
+    <div class="row" style="margin-top:3px;">
+     <div class="col-33 text-center" ng-repeat="item in mypara.ImgLst" ng-click="fangda(item,$index)">
+       <img src="{{item.ImgUrl}}" width="100%" />
+     </div>
+    
+     <div class="col-33 text-center"  ng-if="shequrenwu.Data.IsFinish!='已完成'">
+       <img src="img/shangchuan.png" width="100%" ng-click="sheet();" />
+     </div>
+   </div>
+  </ion-content>
+<script id="tupian-modal.html" type="text/ng-template">
+  <div class="modal">
+   <div class="bar bar-header bar-light">
+    <button class="button" ng-click="deleteimg()">删除</button>
+  <h1 class="title">图片预览</h1>
+  <button class="button"  ng-click="closeModal()">关闭</button>
+</div>
+    <ion-content  class="has-header">
+<ion-scroll zooming="true"
+        direction="xy" 
+        delegate-handle="zoom-pane" 
+        class="zoom-pane" 
+        min-zoom="1" 
+                    scrollbar-x="false" 
+              scrollbar-y="false" 
+        overflow-scroll="false">
+  <img width="100%" src="{{curritem.ImgUrl}}" />
+  
+  </ion-scroll> 
+    
+    </ion-content>
+  </div>
+</script>
+
+</ion-view>

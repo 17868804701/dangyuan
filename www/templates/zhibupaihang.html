@@ -1,0 +1,137 @@
+<ion-view view-title="{{showtype=='jifen'?'积分查询':'党员信息'}}"  hide-back-button="true">
+<ion-nav-title>
+  {{showtype=='jifen'?'积分查询':'党员信息'}}
+</ion-nav-title>
+
+  <ion-content  style="background-color:#f5f5f5">
+ <ion-list >
+ 
+   
+    
+ 
+  <ion-item class="item-remove-animate item-icon-left item-icon-right"  type="item-text-wrap" ng-if="showtype=='jifen'">
+        <i class="icon ion-chevron-left icon-accessory" ng-click="changeyear(-1);"></i>
+   
+        <h2 class="text-center" >{{para.YearID}}</h2>
+        
+        <i class="icon ion-chevron-right icon-accessory" ng-click="changeyear(1);"></i>
+      </ion-item>
+         <ion-item class="item item-input">
+
+    <input type="text" placeholder="请输入党员姓名" ng-model="para.key" >&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="button button-small button-default" ng-click="sousuo();">搜索</button>
+  </ion-item>
+<div class="row" style="padding:0">
+   <div class="col" >
+       <button class="button button-block button-positive"  ng-click="openModalb();">高级</button>
+
+   </div>
+</div>
+      <ion-item class="item-remove-animate"  type="item-text-wrap" >
+       
+   
+        <h2 class="text-center" >共{{mypaiming.Data.Count}}条</h2>
+        
+      </ion-item>
+       <ion-item  style="margin-top:10px;" class="item-remove-animate  item-icon-right" ng-class="showtype=='jifen'?'item-avatar':''" type="item-text-wrap" ng-href="{{showtype=='jifen'?'#/tab/myjifen/'+item.dyId+'/'+para.YearID:'#/tab/mypartyview/'+item.dyId}}" ng-repeat="item in mypaiming.Data.SortData">
+        <img ng-src="{{item.dyTouxiang}}" onerror="javascript:this.src='img/user_default.png';" id="noradiusimg" ng-show="showtype=='jifen'">
+        <h2>{{item.dyName}} <span ng-show="showtype!='jifen'">性别：{{item.dySex==1?'男':'女'}} 年龄 ：{{item.dyAge}}党龄：{{item.DdyAge}}</span></h2>
+        <p ng-show="showtype=='jifen'">积分:{{item.dyZongfen}}</p>
+        <p ng-if="uType>3">所属支部:{{item.dyZhibu}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+<script id="xuanzedangwei-modal.html" type="text/ng-template">
+  <div class="modal">
+   <div class="bar bar-header bar-light">
+    <button class="button" ng-click="quedingc()">确定</button>
+  <h1 class="title">&nbsp;</h1>
+  <button class="button"  ng-click="closeModalc()">关闭</button>
+</div>
+    <ion-content  class="has-header">
+
+    <div class="list">
+      <div class="item item-divider">
+      请选择党委
+  </div>
+  <ion-radio ng-click="seldwc({'dwName':'全部','dwId':'-1'});">全部</ion-radio>
+  <div ng-repeat="dw in zhibulist.Data">
+  <ion-radio ng-click="seldwc(dw);">{{dw.dwName}}</ion-radio>
+
+  </div>
+    
+
+    </div>
+    
+    </ion-content>
+  </div>
+</script>
+<script id="fenleichaxun-modal.html" type="text/ng-template">
+  <div class="modal">
+   <div class="bar bar-header bar-light">
+    <button class="button" ng-click="queding()">确定</button>
+  <h1 class="title">&nbsp;</h1>
+  <button class="button"  ng-click="closeModal()">关闭</button>
+</div>
+    <ion-content  class="has-header">
+
+    <div class="list">
+      <div class="item item-divider">
+      请选择党支部
+  </div>
+  <ion-radio ng-click="quanbu();">全部</ion-radio>
+  <div ng-repeat="dw in zhibulist.Data">
+  <div class="item" ng-click="dw.selected=!dw.selected">{{dw.dwName}}
+
+  </div>
+    <ion-radio style="padding-left:30px;" ng-show="dw.selected" ng-click="sele(dw,zb)" ng-repeat="zb in dw.ZhibuLst">{{zb.zbName}}</ion-radio>
+  </div>
+    
+
+    </div>
+    
+    </ion-content>
+  </div>
+</script>
+<script id="gaojichaxun-modal.html" type="text/ng-template">
+  <div class="modal">
+   <div class="bar bar-header bar-light">
+    <button class="button" ng-click="quedingb()">确定</button>
+  <h1 class="title">&nbsp;</h1>
+  <button class="button"  ng-click="closeModalb()">关闭</button>
+</div>
+    <ion-content  class="has-header">
+    <ion-item  ng-click="openModalc('out');" ng-show="uType>4">
+       <p>请选择党委：{{outzb.dwName}}</p>
+
+     </ion-item>
+<ion-item  ng-click="openModal('out');" ng-show="uType>3">
+       <p>请选择支部：{{outzb.zbName}}</p>
+
+     </ion-item>
+      <ion-item  ng-click="opensheet('性别');" >
+       <p>请选择性别：{{outzb.xingbie}}</p>
+
+     </ion-item>
+      <ion-item  ng-click="opensheet('学历');">
+       <p>请选择学历：{{outzb.xueli}}</p>
+
+     </ion-item>
+      <ion-item  ng-click="opensheet('年龄');">
+       <p>请选择年龄：{{outzb.nianling}}</p>
+
+     </ion-item>
+       <ion-item  ng-click="opensheet('党龄');">
+       <p>请选择党龄：{{outzb.dangling}}</p>
+
+     </ion-item>
+    
+    
+    </ion-content>
+  </div>
+</script>
+</ion-view>

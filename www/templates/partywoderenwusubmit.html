@@ -1,0 +1,63 @@
+<ion-view view-title="支部任务举证" hide-back-button="true" >
+<ion-nav-buttons side="left">
+    <a  class="" style="color: white" href="#/tab/partywodejifen" nav-clear ><img src="img/fanhui.png" style="width:35px;height:35px;margin-top:0px;margin-right:5px;" /></a>
+</ion-nav-buttons>
+  <ion-content  style="background-color:#f5f5f5">
+  <ion-item style="margin-top:10px;" class="item-remove-animate "  type="item-text-wrap" >
+       
+        <h2>{{arenwu.jfrenwu}}</h2>
+      </ion-item>
+  <ion-item style="margin-top:10px;" class="item-remove-animate item-avatar "  type="item-text-wrap" ng-click="clkitem(item,$index)" ng-repeat="item in arenwu.ImgLst">
+        <img ng-src="{{item.ImgUrl||'img/dang1.jpg'}}" id="noradiusimg" onerror="javascript:this.src='img/dang1.jpg';">
+        <h2>{{item.ImgIllustrate}}</h2>
+      </ion-item>
+
+   <div class="row" style="margin-top:10px;" ng-if="canedit">
+     <div class="col text-right">&nbsp;</div>
+     <div class="col text-center">&nbsp;</div>
+     <div class="col"><img src="img/baocun.png" style="width:100%" ng-click="save('保存');" /></div>
+   </div>
+   <div class="row" style="margin-top:0px;padding:4px;" ng-if="canedit">
+     <div class="col text-center" id="redborder">
+       <textarea rows="10" ng-model="para.curritem.ImgIllustrate">上月完成任务说明</textarea>
+     </div>  
+   </div>
+   <div class="row" style="margin-top:3px;" ng-if="canedit">
+     <div class="col-33 text-center" ng-show="para.curritem.ImgUrl"  ng-click="fangda(item,$index)">
+       <img src="{{para.curritem.ImgUrl}}" width="100%" />
+     </div>
+  
+     <div class="col-33 text-center">
+       <img src="img/shangchuan.png" width="100%" ng-click="sheet();" />
+     </div>
+   </div>
+  
+  </ion-content>
+
+
+  <script id="tupian-modal.html" type="text/ng-template">
+  <div class="modal">
+   <div class="bar bar-header bar-light">
+    <button class="button" ng-click="deleteimg()">删除</button>
+  <h1 class="title">图片预览</h1>
+  <button class="button"  ng-click="closeModal()">关闭</button>
+</div>
+    <ion-content  class="has-header">
+    
+<ion-scroll zooming="true"
+        direction="xy" 
+        delegate-handle="zoom-pane" 
+        class="zoom-pane" 
+        min-zoom="1" 
+                    scrollbar-x="false" 
+              scrollbar-y="false" 
+        overflow-scroll="false">
+  <img width="100%" src="{{para.curritem.ImgUrl}}" />
+  </ion-scroll> 
+
+   
+    
+    </ion-content>
+  </div>
+</script>
+</ion-view>

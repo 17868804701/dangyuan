@@ -1,0 +1,29 @@
+<ion-view view-title="我的积分" hide-back-button="true">
+<ion-nav-buttons side="left">
+    <a  class="" style="color: white" href="#/tab/party" nav-clear ><img src="img/fanhui.png" style="width:35px;height:35px;margin-top:0px;margin-right:5px;" /></a>
+</ion-nav-buttons>
+
+  <ion-content style="background-color:#f5f5f5">
+ <ion-list>
+      <ion-item class="item-remove-animate item-icon-left item-icon-right"  type="item-text-wrap" >
+        <i class="icon ion-chevron-left icon-accessory" ng-click="changeyear(-1);"></i>
+
+        <h2 class="text-center" >{{para.YearID}}</h2>
+
+        <i class="icon ion-chevron-right icon-accessory" ng-click="changeyear(1);"></i>
+      </ion-item>
+      <div class="row" style="margin-top:10px;" >
+     <div class="col text-center" style="color: {{rwtype=='zhibu'?'red':'black';}}" ng-click="rwtype='zhibu'">支部任务</div>
+
+     <div class="col text-center" style="color: {{rwtype=='wode'?'red':'black';}}" ng-click="rwtype='wode'">我的任务</div>
+
+   </div>
+ <ion-item  style="margin-top:10px;" class="item-remove-animate item-icon-right"  type="item-text-wrap" ng-href="#/tab/partywoderenwulist/{{para.YearID}}/{{item}}/{{rwtype}}/{{hide}}" ng-repeat="item in monthlistb">
+
+        <h2>{{para.YearID}}年{{item}}月</h2>
+        <i class="icon ion-chevron-right icon-accessory" ></i>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

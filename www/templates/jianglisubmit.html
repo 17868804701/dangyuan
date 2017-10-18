@@ -1,0 +1,61 @@
+<ion-view view-title="奖励积分填报" hide-back-button="true" >
+<ion-nav-buttons side="left">
+   
+    <a  class="" style="color: white" href="#/tab/jianglidetails" nav-clear ><img src="img/fanhui.png" style="width:35px;height:35px;margin-top:0px;margin-right:5px;" /></a>
+</ion-nav-buttons>
+  <ion-content  style="background-color:#f5f5f5">
+   <div class="row" style="margin-top:10px;" ng-show="canedit">
+   <div class="col text-center">&nbsp;</div>
+     <div class="col">&nbsp;</div>
+     <div class="col text-right"><img src="img/baocun.png" style="width:100%" ng-click="save();" /></div>
+     
+   </div>
+   <div class="row" style="margin-top:0px;padding:4px;">
+     <div class="col text-center" id="redborder">
+       <textarea rows="10" placeholder="奖励情况说明" ng-model="jiangli.Idea" ng-disabled="!canedit"></textarea>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col text-center">
+         <button type="button" class="button button-positive  button-small" ng-disabled="!canedit" ng-class="jiangli.JfType==0?' ':'button-outline'" style="width:90%" ng-click="jiangli.JfType=0">县级奖励</button>
+     </div>
+     <div class="col text-center">
+       <button type="button" class="button button-positive  button-small" ng-disabled="!canedit" style="width:90%" ng-class="jiangli.JfType==1?'':'button-outline'" ng-click="jiangli.JfType=1">县级以上奖励</button>
+     </div>
+   
+   </div>
+
+   <div class="row" style="margin-top:3px;">
+     <div class="col-33 text-center" ng-repeat="item in jiangli.ImgLst" ng-click="fangda(item,$index)">
+       <img src="{{item.ImgUrl}}" width="100%" />
+     </div>
+     
+     <div class="col-33 text-center" ng-show="canedit">
+       <img src="img/shangchuan.png" width="100%" ng-click="sheet();" />
+     </div>
+   </div>
+  </ion-content>
+  <script id="tupian-modal.html" type="text/ng-template">
+  <div class="modal">
+   <div class="bar bar-header bar-light">
+    <button class="button" ng-click="deleteimg()">删除</button>
+  <h1 class="title">图片预览</h1>
+  <button class="button"  ng-click="closeModal()">关闭</button>
+</div>
+    <ion-content  class="has-header">
+<ion-scroll zooming="true"
+        direction="xy" 
+        delegate-handle="zoom-pane" 
+        class="zoom-pane" 
+        min-zoom="1" 
+                    scrollbar-x="false" 
+              scrollbar-y="false" 
+        overflow-scroll="false">
+  <img width="100%" src="{{curritem.ImgUrl}}" />
+  
+  </ion-scroll> 
+    
+    </ion-content>
+  </div>
+</script>
+</ion-view>

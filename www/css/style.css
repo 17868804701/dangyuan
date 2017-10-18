@@ -1,0 +1,111 @@
+/* Empty. Add your own CSS if you like */
+h5{
+  margin-bottom: 0;
+}
+  .bar-stable .button.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 17px; }
+
+  .bar.bar-stable {
+    border-color: #b2b2b2;
+    background-color: #eb4a36;
+    background-image: linear-gradient(0deg, #b2b2b2, #b2b2b2 50%, transparent 50%);
+    color: #444; }
+    .bar.bar-stable .title {
+      color: #fff; }
+.card {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3); }
+
+
+ion-tabs.tabs-color-active-positive .tab-item {
+  color: #444; }
+
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
+    color: #eb4a36; }
+
+ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.activated {
+  border-color: #eb4a36;
+  color: #eb4a36; }
+  .button.button-positive {
+    border-color: transparent;
+    background-color: #eb4a36;
+    color: #fff; }
+
+    .button.button-positive.button-outline {
+      border-color: #eb4a36;
+      background: transparent;
+      color: #eb4a36; }
+
+
+.hot{
+  color: #eb4a36;
+}
+.partypadding{
+   padding:10px
+}
+#noradiusimg{
+  border-radius:0;
+}
+#redborder textarea{
+  border:solid 1px  #e5e5e5;
+  padding:10px;
+  width:100%;
+}
+.buttoncolor{
+    color:#eb4a36;
+}
+.ion-ios-home-outlinea{
+  background-image: url('../img/homeh.png');
+  background-repeat: no-repeat;
+  background-size: 32px ;
+  background-position: 50% 0px;
+}
+.ion-ios-home-outlineb{
+background-image: url('../img/home.png');
+  background-repeat: no-repeat;
+  background-size: 32px ;
+  background-position: 50% 0px;
+}
+.ion-ios-people-outlinea{
+  background-image: url('../img/dwh.png');
+  background-repeat: no-repeat;
+  background-size: 32px ;
+  background-position: 50% 0px;
+}
+.ion-ios-people-outlineb{
+  background-image: url('../img/dw.png');
+  background-repeat: no-repeat;
+  background-size: 32px ;
+  background-position: 50% 0px;
+}
+
+.ion-ios-chatboxes-outlinea{
+  background-image: url('../img/lth.png');
+  background-repeat: no-repeat;
+  background-size: 32px ;
+  background-position: 50% 0px;
+}
+.ion-ios-chatboxes-outlineb{
+  background-image: url('../img/lt.png');
+  background-repeat: no-repeat;
+  background-size: 32px ;
+  background-position: 50% 0px;
+}
+
+.ion-ios-person-outlinea{
+  background-image: url('../img/woh.png');
+  background-repeat: no-repeat;
+  background-size: 32px ;
+  background-position: 50% 0px;
+}
+.ion-ios-person-outlineb{
+  background-image: url('../img/wo.png');
+  background-repeat: no-repeat;
+  background-size: 32px ;
+  background-position: 50% 0px;
+}

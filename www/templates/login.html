@@ -1,0 +1,65 @@
+<ion-view view-title="系统登录" hide-nav-bar="true" hide-foot-bar="true" cache="false">
+  <ion-content style="background-image: url(img/bggggggggg.png);background-size:cover;" overflow-scroll="true"
+               style="overflow: hidden">
+    <div class="row">
+      <div class="col text-center">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-center">
+        <h2 style="color:white;font-size:18pt">&nbsp;</h2>
+        <h3 style="color:white;font-size:18pt">&nbsp;</h3>
+        <h3 style="color:white;font-size:18pt">&nbsp;</h3>
+      </div>
+    </div>
+
+    <div class="list card" style="margin-top:-5%;background:none;padding-left:20px;padding-right: 20px;">
+      <div class="item item-icon-right" ng-click="jiaose.show=!jiaose.show" style="background: none">
+        <p>{{!jiaose.seljiaose?'请选择角色':jiaose.seljiaose}}</p>
+        <i class="icon ion-chevron-down icon-accessory"></i>
+      </div>
+      <div class="item" style="background: none" ng-show="jiaose.show"
+           ng-click="jiaose.seljiaose='党员';jiaose.type=1;jiaose.show=false;">
+        <p>党员</p>
+      </div>
+      <div class="item" style="background: none" ng-show="jiaose.show"
+           ng-click="jiaose.seljiaose='支部';jiaose.type=3;jiaose.show=false;">
+        <p>支部</p>
+      </div>
+      <div class="item" style="background: none" ng-show="jiaose.show"
+           ng-click="jiaose.seljiaose='党委';jiaose.type=4;jiaose.show=false;">
+        <p>党委</p>
+      </div>
+      <div class="item" style="background: none" ng-show="jiaose.show"
+           ng-click="jiaose.seljiaose='组织部';jiaose.type=5;jiaose.show=false;">
+        <p>组织部</p>
+      </div>
+      <label class="item item-input"
+             style="background-image: url('img/yonghu.jpg') ;background-repeat: no-repeat;background-size: 30px ;background-position: 8px 4px;border:solid 1px #ccc;border-radius: 4px;background-color:#f7f7c3;height: 40px">
+        <input type="text" placeholder="请输入用户名" ng-model="auser.UserName" style="margin-left:40px;color: #666;"/>
+      </label>
+
+      <label class="item item-input"
+             style="background-image: url('img/mima.jpg') ;background-repeat: no-repeat;background-size: 35px ;background-position: 8px 4px;margin-top:10px;border:solid 1px #ccc;border-radius: 4px;background-color:#f7f7c3;height: 40px">
+
+        <input type="password" placeholder="请输入密码" ng-model="auser.Password" style="margin-left:40px;color: #666"/>
+      </label>
+      <!-- -->
+
+    </div>
+    <div class="row">
+      <div class="col text-center" style="padding-left:20px;padding-right: 20px;margin-top: -10px;">
+        <button ng-click="dologin();"
+                type="button"
+                style="border-radius: 4px;height: 40px;width: 97%;background-color: #eb4a36;color: white;border: 0">登录
+        </button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

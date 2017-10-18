@@ -1,0 +1,39 @@
+<ion-view view-title="修改密码" hide-back-button="true">
+<ion-nav-buttons side="left">
+    <a  class="button button-icon icon ion-ios-arrow-back" style="color: white" href="#/tab/zhibuindex"  nav-clear></a>
+</ion-nav-buttons>
+
+  <ion-content>
+ <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="{{user.data.dyTouxiang}}" onerror="javascript:this.src='img/user_default.png';" id="noradiusimg" >
+        <span class="item-input">{{user.data.dyName}}</span>
+        <p>{{user.data.dyDanwei}}</p>
+        
+      </ion-item>
+
+     <label class="item item-input">
+     <span class="item-input">原密码：</span>
+      <input type="password" placeholder="原密码" ng-model="user.data.yuanmima">
+    </label>
+    <label class="item item-input">
+     <span class="item-input">新密码：</span>
+      <input type="password" placeholder="新密码" ng-model="user.data.xinmima" >
+    </label>
+    <label class="item item-input">
+     <span class="item-input">确认密码：</span>
+      <input type="password" placeholder="确认密码" ng-model="user.data.xinmimab" >
+    </label>
+    
+  
+
+
+    
+    </ion-list>
+    <div class="row">
+      <div class="col text-center">
+        <button ng-click="doxiugai();" class="button button-positive button-full">保存</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

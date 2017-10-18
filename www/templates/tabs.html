@@ -1,0 +1,37 @@
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+  <!-- Home Tab -->
+  <ion-tab title="首页" icon-off="ion-ios-home-outlinea" icon-on="ion-ios-home-outlineb" ng-click="idxclk()" href="#/tab/index" ng-if="uType<3">
+    <ion-nav-view name="tab-index"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="积分" icon-off="ion-ios-people-outlinea" icon-on="ion-ios-people-outlineb" ng-click="partyclk()" href="#/tab/party" ng-if="uType<3">
+    <ion-nav-view name="tab-party"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab title="消息" icon-off="ion-ios-chatboxes-outlinea" icon-on="ion-ios-chatboxes-outlineb" ng-click="chatclk()" href="#/tab/chats" ng-if="uType<3">
+    <ion-nav-view name="tab-chats"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Account Tab -->
+  <ion-tab title="我的" icon-off="ion-ios-person-outlinea" ng-click="accclk()" icon-on="ion-ios-person-outlineb" href="#/tab/account" ng-if="uType<3">
+    <ion-nav-view name="tab-account"></ion-nav-view>
+  </ion-tab>
+
+   <ion-tab title="首页" icon-off="ion-ios-home-outlinea" icon-on="ion-ios-home-outlineb" ng-click="zhibuindexclk()" href="#/tab/zhibuindex" ng-if="uType>=3">
+    <ion-nav-view name="tab-dwindex"></ion-nav-view>
+  </ion-tab>
+ 
+<ion-tab title="积分" icon-off="ion-ios-people-outlinea" icon-on="ion-ios-people-outlineb" ng-click="jifenpaihangclk()" href="#/tab/jifenpaihang/jifen" ng-if="uType>=3">
+    <ion-nav-view name="tab-dwjifen"></ion-nav-view>
+  </ion-tab>
+
+<ion-tab title="党员" icon-off="ion-ios-person-outlinea" icon-on="ion-ios-person-outlineb" ng-click="zhibupaihangclk()" href="#/tab/zhibupaihang" ng-if="uType>=3">
+    <ion-nav-view name="tab-dwdangyuan"></ion-nav-view>
+  </ion-tab>
+  <ion-tab title="活动" icon-off="ion-ios-chatboxes-outlinea" icon-on="ion-ios-chatboxes-outlineb" ng-click="huodongclk()" href="#/tab/huodong" ng-if="uType>=3">
+    <ion-nav-view name="tab-huodong"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

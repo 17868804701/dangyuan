@@ -1,0 +1,21 @@
+<ion-view view-title="我的收藏" hide-back-button="true">
+<ion-nav-buttons side="left">
+    <a  class="" style="color: white" href="#/tab/account" nav-clear ><img src="img/fanhui.png" style="width:35px;height:35px;margin-top:0px;margin-right:5px;" /></a>
+</ion-nav-buttons>
+  <ion-content style="background-color:#f5f5f5">
+ <ion-list>
+      
+
+       <ion-item style="margin-top:10px;" class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/shoucangview/{{item.tzId}}" ng-repeat="item in shoucangdata.Data">
+
+         <img ng-src="{{item.tzPic||'img/dang1.jpg'}}" id="noradiusimg">
+    
+        <p  style="white-space:normal">{{item.tzTitle}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

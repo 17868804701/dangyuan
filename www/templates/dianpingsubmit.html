@@ -1,0 +1,46 @@
+<ion-view view-title="{{years}}年{{months}}月" hide-back-button="true" >
+<ion-nav-buttons side="left">
+
+     <a  class="" style="color: white" href="#/tab/dianping" nav-clear ><img src="img/fanhui.png" style="width:35px;height:35px;margin-top:0px;margin-right:5px;" /></a>
+</ion-nav-buttons>
+<ion-nav-title>
+   {{years}}年{{months
+}}月
+</ion-nav-title>
+  <ion-content style="background-color:#f5f5f5">
+   <ion-list>
+      <ion-item style="margin-top:10px;" class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="{{adangyuan.Data.dyTouxiang}}" onerror="javascript:this.src='img/user_default.png';" id="noradiusimg">
+        <h2>{{adangyuan.Data.dyName}} </h2>
+        <p>{{adangyuan.Data.dyDanwei}}</p>
+
+
+
+      </ion-item>
+</ion-list>
+<!-- 增加接口：显示所有人的点评信息 -->
+<div class="row" ng-repeat="item in dianpingliebiao2.Data" ng-if="canshow">
+
+     <div class="col text-left" id="redborder" >
+     <p>点评内容：{{item.Content}}
+</p>
+     </div>
+   </div>
+
+   <div class="row" ng-if="!canshow">
+       <div class="col text-center" id="redborder" ng-show="!adianping.Data.isDianping">
+       <textarea rows="10" style="padding: 10px;" ng-model="param.Content">点评意见</textarea>
+     </div>
+     <div class="col text-left" id="redborder" ng-show="adianping.Data.isDianping">
+     <p>点评内容：{{adianping.Data.dpCounts}}
+</p>
+     </div>
+   </div>
+  <div class="row" ng-if="!canshow">
+      <div class="col text-center">
+        <button  class="button button-positive button-full" style="border-radius: 4px;" ng-click="save()" ng-if="!adianping.Data.isDianping">提交</button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

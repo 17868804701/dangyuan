@@ -1,0 +1,25 @@
+<ion-view view-title="活动详情" hide-back-button="true"  >
+<ion-nav-buttons side="left">
+    <a  class="" style="color: white" href="#/tab/huodonglist/{{param.hdid}}" nav-clear ><img src="img/fanhui.png" style="width:35px;height:35px;margin-top:0px;margin-right:5px;" /></a>
+</ion-nav-buttons>
+  <ion-content style="background-color:#f5f5f5">
+   <div class="row" style="margin-top:10px;">
+     <div class="col text-left" id="redborder" style="background-color: white;">
+       <h3>{{huodongdetail.title}}</h3>
+       <p>发布日期：{{huodongdetail.addtime|mydate}}</p>
+       <pre ng-bind-html="huodongdetail.content|cr2br"></pre>
+     </div>
+   </div>
+   <ion-list ng-if="huodongdetail.haslist">
+   <ion-item  class="partypadding">
+      <p>回应内容</p>
+   </ion-item>
+   <ion-item  class="partypadding" ng-repeat="item in huodongdetail.ztxxHyList" type="item-text-wrap">
+      
+      <p >{{item.ztxxhytitle}}【{{item.ztxxhyuid}}于{{item.ztxxhyaddtime|mydate}}回应】</p>
+      <p style="white-space:normal" ng-bind-html="item.ztxxhycounts|cr2br"></p>
+     
+   </ion-item>
+   </ion-list>
+  </ion-content>
+</ion-view>

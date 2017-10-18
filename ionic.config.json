@@ -1,0 +1,13 @@
+{
+  "name": "jifen",
+  "app_id": "74b847d9",
+  "cookieRewrite": true,
+  "proxies": [
+    {
+      "path": "/PMMobileService",
+      "proxyUrl": "http://125.76.233.119:8065/PMMobileService",
+      "cookieRewrite": "true"
+    }
+  ],
+  "type": "ionic1"
+}

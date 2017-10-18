@@ -1,0 +1,68 @@
+<ion-view view-title="延安市洛川县支部小管家" hide-back-button="true">
+  <ion-content style="background-color: #f5f5f5">
+    
+<ion-list ng-if="uType==3">
+      <ion-item class="partypadding" style="margin-top:15px;">
+      <p>支部名称：<span >{{gaishu.Data.Name}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>支部书记：<span >{{gaishu.Data.LeaderName}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>支部届数：<span >{{gaishu.Data.ZBJieShu}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>党员数：<span >{{gaishu.Data.PartyCount}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>所属党委：<span >{{gaishu.Data.DangWeiName}}</span></p>
+      </ion-item>
+    </ion-list>
+    <!-- 党委 -->
+    <ion-list ng-if="uType==4">
+      <ion-item class="partypadding" style="margin-top:15px;">
+      <p>党委名称：<span >{{gaishu.Data.Name}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>党委书记：<span >{{gaishu.Data.LeaderName}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>总支数：<span >{{gaishu.Data.TotalBranch}}</span></p>
+      </ion-item>
+       <ion-item  class="partypadding">
+      <p>支部数：<span >{{gaishu.Data.BranchCount}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>党员数：<span >{{gaishu.Data.PartyCount}}</span></p>
+      </ion-item>
+       </ion-list>
+      <!-- 组织部 -->
+    <ion-list ng-if="uType==5">
+      <ion-item class="partypadding" style="margin-top:15px;">
+      <p>组织部名称：<span >{{gaishu.Data.Name}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>党委数：<span >{{gaishu.Data.DangWeiCount}}</span></p>
+      </ion-item>
+    
+       <ion-item  class="partypadding">
+      <p>支部数：<span >{{gaishu.Data.BranchCount}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>党员数：<span >{{gaishu.Data.PartyCount}}</span></p>
+      </ion-item>
+    </ion-list>
+     <div class="row">
+      <div class="col text-center" style="padding-left:11px;padding-right:11px">
+         <button  ng-click="xiugaimimab();" type="button" class="button button-positive button-full" nav-clear style="border-radius: 4px;" >修改密码 </button>
+     
+      </div>
+    </div>
+ <div class="row">
+      <div class="col text-center" style="padding-left:11px;padding-right:11px">
+         <button  ng-click="logoutbb();" type="button" class="button button-positive button-full" nav-clear style="border-radius: 4px;" >退出登录 </button>
+     
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

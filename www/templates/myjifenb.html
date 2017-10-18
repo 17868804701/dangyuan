@@ -1,0 +1,33 @@
+<ion-view view-title="积分查询" hide-back-button="true">
+<ion-nav-buttons side="left">
+  
+     <a  class="" style="color: white" href="#/tab/jifenpaihang/jifen" nav-clear ><img src="img/fanhui.png" style="width:35px;height:35px;margin-top:0px;margin-right:5px;" /></a>
+</ion-nav-buttons>
+  <ion-content>
+   
+<ion-list>
+<ion-item class="partypadding" style="margin-top:15px;">
+      <p>姓名：<span class="hot">{{currentuser.dyName}}</span></p>
+      </ion-item>
+      <ion-item class="partypadding">
+      <p>年份：<span class="hot">{{currentuser.nianfen}}</span></p>
+      </ion-item>
+      <ion-item class="partypadding">
+      <p>上年度评议分：<span class="hot">{{myfenshu.Data.shangniandu}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>本年度累计积分：<span class="hot">{{myfenshu.Data.benniandu}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>本年度基础分：<span class="hot">{{myfenshu.Data.benniandujichu}}</span>，任务分：<span class="hot">{{myfenshu.Data.banniandurenwu}}</span>，奖励分：<span class="hot">{{myfenshu.Data.benniandujiangli}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>本月积分：<span class="hot">{{myfenshu.Data.benyue}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>上月积分：<span class="hot">{{myfenshu.Data.shangyue}}</span></p>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

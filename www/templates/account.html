@@ -1,0 +1,75 @@
+<ion-view view-title="个人中心" hide-back-button="true">
+  <ion-content style="background-color:#f5f5f5">
+ <ion-list>
+      <ion-item style="margin-top:10px;" class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/profile">
+        <img ng-src="{{user.data.dyTouxiang}}" onerror="javascript:this.src='img/user_default.png';" id="noradiusimg">
+        <h2>{{user.data.dyName}}</h2>
+        <p>{{user.data.dyJiyu}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+
+      </ion-item>
+
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/chengnuolist">
+        <img ng-src="img/nd.jpg" id="noradiusimg">
+        <h2>年度承诺</h2>
+        <p ng-show="nianduchengnuo.Data.length>0">已填写，点击查看.</p>
+        <p  ng-show="!nianduchengnuo.Data||nianduchengnuo.Data.length==0">未填写，点击填写.</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+
+      </ion-item>
+
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/shoucanglist">
+        <img ng-src="img/sc.jpg" id="noradiusimg">
+        <h2>我的收藏</h2>
+        <p>已收藏{{shoucangdata.Data.length}}篇.</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+
+      </ion-item>
+
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/wodejifen">
+        <img ng-src="img/jf.png" id="noradiusimg">
+        <h2>我的积分</h2>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/shangjiaolist">
+        <img ng-src="img/df.jpg" id="noradiusimg">
+        <h2>党费上缴</h2>
+        <p ng-show="dangfei.Data">已上交.</p>
+        <p ng-show="!dangfei.Data">未上交.</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+
+      </ion-item >
+         <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/renwudetails">
+        <img ng-src="img/sq.jpg" id="noradiusimg">
+        <h2>社区任务领取</h2>
+        <p ng-show="lingqudata.Data">已领取.</p>
+        <p ng-show="!lingqudata.Data">未领取.</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+
+      </ion-item>
+       <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/xiugaimima">
+        <img ng-src="img/pass.png" id="noradiusimg">
+        <h2>修改密码</h2>
+
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+
+      </ion-item>
+
+
+
+    </ion-list>
+    <div class="row">
+      <div class="col text-center" style="padding-left:11px;padding-right:11px">
+         <button  ng-click="logout();" class="button button-positive button-full" nav-clear style="border-radius: 4px;" >退出登录 </button>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

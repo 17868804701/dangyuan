@@ -1,0 +1,60 @@
+<ion-view view-title="积分管家"  hide-back-button="true" >
+  <ion-content style="background-color:#f5f5f5">
+    <ion-list>
+      <ion-item class="partypadding" style="margin-top:15px;">
+      <p>上年度评议分：<span class="hot">{{myfenshu.Data.shangniandu}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>本年度累计积分：<span class="hot">{{myfenshu.Data.benniandu}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>本年度基础分：<span class="hot">{{myfenshu.Data.benniandujichu}}</span>，任务分：<span class="hot">{{myfenshu.Data.banniandurenwu}}</span>，奖励分：<span class="hot">{{myfenshu.Data.benniandujiangli}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>本月积分：<span class="hot">{{myfenshu.Data.benyue}}</span></p>
+      </ion-item>
+      <ion-item  class="partypadding">
+      <p>上月积分：<span class="hot">{{myfenshu.Data.shangyue}}</span></p>
+      </ion-item>
+    </ion-list>
+    <div class="row">
+    	<div class="col text-center" style="padding-left:11px;padding-right:11px">
+    		 <a ng-href="#/tab/partywodejifen/0" class="button button-positive button-full" nav-clear style="border-radius: 4px;" >查看积分明细 </a>
+    	</div>
+    </div>
+  <div class="row" style="padding: 0;">
+  <div class="col text-right">
+     <a ng-href="#/tab/partywodejifen/1">
+     	<img src="img/01.png" width="90%" />
+      </a>
+  </div>
+  <div class="col text-center" >
+      <a ng-href="#/tab/jianglidetails">
+     	<img src="img/02.png" width="90%"   />
+      </a>
+  </div>
+  <div class="col">
+   <a ng-href="#/tab/xinwenlist">
+     	<img src="img/03.png" width="90%"   />
+      </a>
+  </div>
+  </div>
+  <div class="row" style="padding: 0;margin-top:0px;">
+  <div class="col text-right">
+      <a ng-href="#/tab/paiming">
+     	<img src="img/04.png" width="90%" />
+      </a>
+  </div>
+  <div class="col text-center" >
+      <a ng-href="#/tab/dianping">
+     	  <img src="img/05.png" width="90%"   />
+      </a>
+  </div>
+  <div class="col">
+    <a ng-href="#/tab/banqianlist">
+       	<img src="img/06.png" width="90%"   />
+    </a>
+  </div>
+  </div>
+  </ion-content>
+</ion-view>

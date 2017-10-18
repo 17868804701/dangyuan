@@ -1,0 +1,17 @@
+<ion-view view-title="活动" hide-back-button="true">
+  <ion-content style="background-color:#f5f5f5">
+ <ion-list>
+      
+
+       <ion-item style="margin-top:10px;" class="item-remove-animate  item-icon-right"  type="item-text-wrap" href="#/tab/huodonglist/{{item.hdId}}" ng-repeat="item in huodong.Data" ng-hide="uType==5&&item.hdId==6">
+      
+        <p style="white-space:normal">{{item.hdTitle}}</p>
+        <!-- <p>{{item.tzTime|mydate}}</p> -->
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

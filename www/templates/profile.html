@@ -1,0 +1,107 @@
+<ion-view view-title="党员资料" hide-back-button="true">
+<ion-nav-buttons side="left">
+    <a  class="button button-icon icon ion-ios-arrow-back" style="color: white" href="#/tab/account"  nav-clear></a>
+</ion-nav-buttons>
+
+  <ion-content>
+ <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" >
+        <img ng-src="{{user.data.dyTouxiang}}" onerror="javascript:this.src='img/user_default.png';" id="noradiusimg" ng-click="edittouxiang();">
+        <span class="item-input">{{user.data.dyName}}</span>
+        <p>{{user.data.dyDanwei}}</p>
+       
+
+        
+      </ion-item>
+
+     <label class="item item-input">
+     <span class="item-input">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+      <input type="text" placeholder="姓名" ng-model="user.data.dyName" ng-disabled="mypara.state=='编辑'">
+    </label>
+    <label class="item item-input">
+     <span class="item-input">身份证号：</span>
+      <input type="text" placeholder="身份证号" ng-model="user.data.dyShenfenzheng" ng-disabled="mypara.state=='编辑'">
+    </label>
+    <label class="item item-input">
+     <span class="item-input">电话号码：</span>
+      <input type="text" placeholder="电话号码" ng-model="user.data.dyTel" ng-disabled="mypara.state=='编辑'">
+    </label>
+    <ion-item class="item item-input"   ng-hide="mypara.state=='保存'">
+        
+        <span class="item-input">生日：</span>
+        <p>{{(user.data.dyBirthday|mydate).split(' ')[0]}}</p>
+       
+
+        
+      </ion-item>
+      <ion-item class="item item-input"   ng-hide="mypara.state=='保存'">
+        
+        <span class="item-input">入党时间：</span>
+        <p>{{(user.data.dyRDtime|mydate).split(' ')[0]}}</p>
+       
+
+        
+      </ion-item>
+      <ion-item class="item item-input"   ng-hide="mypara.state=='保存'">
+        
+        <span class="item-input">职务：</span>
+        <p>{{user.data.dyZhiWuName}}</p>
+       
+
+        
+      </ion-item>
+      <ion-item class="item item-input"   ng-hide="mypara.state=='保存'">
+        
+        <span class="item-input">电话：</span>
+        <p><a href="tel:{{user.data.dyTel}}">{{user.data.dyTel}}</a></p>
+       
+
+        
+      </ion-item>
+       <ion-item class="item item-input"   ng-hide="mypara.state=='保存'">
+        
+        <span class="item-input">学历：</span>
+        <p>{{user.data.dyXueLiName}}</p>
+       
+
+        
+      </ion-item>
+       <ion-item class="item item-input"   ng-hide="mypara.state=='保存'">
+        
+        <span class="item-input">单位：</span>
+        <p>{{user.data.dyDanwei}}</p>
+       
+
+        
+      </ion-item>
+       <ion-item class="item item-input"   ng-hide="mypara.state=='保存'">
+        
+        <span class="item-input">家庭住址：</span>
+        <p>{{user.data.dyJiatingzhuzhi}}</p>
+       
+
+        
+      </ion-item>
+       <ion-item class="item item-input"   ng-hide="mypara.state=='保存'">
+        
+        <span class="item-input">类别：</span>
+        <p>{{user.data.dyTypeName}}</p>
+       
+
+        
+      </ion-item>
+    <label class="item item-input">
+      <span class="item-input">寄&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;语：</span>
+      <input type="text" placeholder="寄语" ng-model="user.data.dyJiyu" ng-disabled="mypara.state=='编辑'" />
+    </label>
+
+
+    
+    </ion-list>
+    <div class="row">
+      <div class="col text-center">
+        <button ng-click="save();" class="button button-positive button-full">{{mypara.state}}</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
